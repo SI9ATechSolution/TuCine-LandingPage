@@ -29,12 +29,12 @@
 }
 
 .hero-text {
-  background-image: linear-gradient(101.31deg, #FFFCEF 24.05%, rgba(255, 252, 239, 0.816664) 46.52%, rgba(255, 252, 239, 0.67696) 50.55%, rgba(255, 252, 239, 0) 64.33%), url("src/assets/pictures/TuCine_unplash.png");
+  background-image: linear-gradient(101.31deg, #FFFCEF 24.05%, rgba(255, 252, 239, 0.816664) 46.52%, rgba(255, 252, 239, 0.67696) 50.55%, rgba(255, 252, 239, 0) 64.33%), url("images/TuCine_unplash.png");
   background-size: cover;
   background-position: center;
 
   @media (max-width: 730px) {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.59), rgba(255, 255, 255, 0.59)), url("src/assets/pictures/TuCine_unplash.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.59), rgba(255, 255, 255, 0.59)), url("images/TuCine_unplash.png");
   }
 }
 
@@ -57,7 +57,7 @@
 
 
 .contact {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.59), rgba(255, 255, 255, 0.59)), url("src/assets/pictures/Formulario.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.59), rgba(255, 255, 255, 0.59)), url("images/Formulario.png");
   background-size: cover;
   background-position: center;
 }
