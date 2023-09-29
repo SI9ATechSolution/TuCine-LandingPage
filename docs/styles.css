@@ -2,6 +2,10 @@
   Configuration
 ---------------------------------- */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root{
   --green: #5ACD47;
   --greenlight: #76ec66;
