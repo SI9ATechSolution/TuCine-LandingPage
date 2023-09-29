@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  href="/styles/output.css" rel="stylesheet"/>
+    <title>TuCine</title>
+</head>
+<body>
+<!-- Header -->
+
+<nav class="relative flex flex-wrap items-center justify-between bg-white px-2 mb-2">
+  <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+    <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
+      <a class="leading-relaxed inline-block mr-4 py-2 whitespace-nowrap" href="index.html">
+        <img src="https://i.postimg.cc/T2JxZZ2d/brand.png" height="80" alt="tucine logo">
+      </a>
+      <button
+        class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+        type="button" (click)="toggleNavbar()" aria-label="Open menu">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+      </button>
+    </div>
+    <div [ngClass]="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center">
+      <ul class="flex flex-col lg:flex-row list-none mr-auto">
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center leading-snug text-black hover:opacity-75">
+            Características
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center leading-snug text-black hover:opacity-75">
+            Testimonios
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center leading-snug text-black hover:opacity-75">
+            Sobre nosotros
+          </a>
+        </li>
+      </ul>
+      <ul class="flex flex-col lg:flex-row list-none ml-auto">
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center leading-snug text-black hover:opacity-75">
+            <button class="ml-2 font-bold" (click)="redirectToAuthPage()">Iniciar Sesión</button>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="px-3 py-2 flex items-center leading-snug text-black hover:opacity-75">
+            <button style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);"
+                    class="ml-2 font-bold  p-1 px-6 bg-amber-500 rounded-md" (click)="redirectToElection()">Comenzar
+            </button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="p-8 md:px-52 hero-text flex flex-col md:flex-row items-center h-screen">
+  <div class="w-full md:w-1/2 text-center md:text-left">
+    <h1 class="font-bold text-3xl md:text-6xl pb-10">Conoce más sobre esa película especial</h1>
+    <p class="text-black mb:text-xl  mb-2 md:mb-5 text-justify pb-6"><span class="font-bold">TuCine</span> ofrece una
+      diversidad de locaciones para disfrutar esa película especial, conoce y organiza salidas grupales con personas
+      aficionadas al cine.</p>
+    <div class="flex flex-col items-center md:flex-row pb-4">
+      <button style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);"
+              class="font-bold py-3 p-1 px-12 bg-amber-500 rounded-md mb-2 md:mb-0 uppercase"
+              (click)="redirectToElection()">Comenzar<i class="ml-3 fas fa-angle-double-right"></i></button>
+    </div>
+    <div class="flex flex-col items-center md:flex-row">
+      <img src="https://i.postimg.cc/25TrWbXV/google-Play.png" alt="Google play">
+      <img src="https://i.postimg.cc/0yszdSZf/appStore.png" alt="App Store">
+    </div>
+  </div>
+</div>
+
+<main class="px-8 md:px-52">
+  <!-- Description TuCine -->
+  <div class="pt-8 flex flex-col items-center justify-center">
+    <div class="semicircle flex justify-center text-center"></div>
+    <h1 class="font-bold text-3xl md:text-6xl pb-10 text-center">Conéctate con otros cinéfilos y descubre el cine de
+      nicho</h1>
+    <p class="text-black mb:text-xl mb-2 md:mb-5 pb-6 text-center">Descubre una selección única de películas no
+      comerciales en cines universitarios, café-cines y otros espacios culturales en Perú.</p>
+  </div>
+  <!-- Films Description -->
+  <div class="pt-8 md:px-10 flex flex-col md:flex-row">
+    <div class="px-5 w-full md:w-1/2 text-center md:text-left">
+      <img class="hidden md:block w-3/4" src="https://i.postimg.cc/1RVXkBjB/films-description.png">
+    </div>
+    <div class="pt-8 md:pt-0 px-10 w-full md:w-1/2">
+      <div class="semicircle flex justify-center text-center"></div>
+      <h1 class="font-bold text-3xl md:text-4xl pb-10">01. Encontrarás clásicos</h1>
+      <p class="text-black mb:text-xl  mb-2 md:mb-5 text-center md:text-justify pb-6">Descubre nuevas películas de nicho
+        y conoce los
+        clásicos que se han convertido en referentes del cine independiente y experimental.</p>
+      <div class="flex flex-col items-center md:flex-row pb-4">
+        <button style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);"
+                class="font-bold py-3 p-1 px-12 bg-amber-500 rounded-md mb-2 md:mb-0 uppercase"
+                (click)="redirectToElection()">Comenzar<i class="ml-3 fas fa-angle-double-right"></i></button>
+      </div>
+    </div>
+  </div>
+  <!-- Reservation description -->
+  <div class="pt-8 md:px-10 flex flex-col md:flex-row ">
+    <div class="px-5 w-full md:w-1/2 text-center md:text-left">
+      <div class="semicircle flex justify-center text-center"></div>
+      <h1 class="font-bold text-3xl md:text-4xl pb-10">02. Reservas</h1>
+      <p class="text-black mb:text-xl mb-2 md:mb-5 text-center md:text-justify pb-6">¿Quieres compartir tu pasión por el
+        cine de nicho
+        con otros cinéfilos? Con nuestra aplicación, podrás organizar salidas grupales para ver películas en compañía de
+        otros amantes del cine independiente y experimental.</p>
+      <div class="flex flex-col items-center md:flex-row pb-4">
+        <button style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);"
+                class="font-bold py-3 p-1 px-12 bg-amber-500 rounded-md mb-2 md:mb-0 uppercase"
+                (click)="redirectToElection()">Comenzar<i class="ml-3 fas fa-angle-double-right"></i></button>
+      </div>
+    </div>
+    <div class="pt-8 md:pt-0 px-10 w-full md:w-1/2 ">
+      <img class="hidden md:block w-3/4" src="https://i.postimg.cc/NGXGJMKP/reservation-description.png">
+    </div>
+  </div>
+  <!-- Grupal description -->
+  <div class="pt-8 md:px-10 flex flex-col md:flex-row ">
+    <div class="px-5 w-full md:w-1/2 text-center md:text-left">
+      <img class="hidden md:block w-3/4" src="https://i.postimg.cc/bwwhhNvP/grupal-description.png">
+    </div>
+    <div class="pt-8 md:pt-0 px-10 w-full md:w-1/2">
+      <div class="semicircle flex justify-center text-center"></div>
+      <h1 class="font-bold text-3xl md:text-4xl pb-10">03. Organiza tus salidas grupales</h1>
+      <p class="text-black mb:text-xl  mb-2 md:mb-5 text-center md:text-justify pb-6">Evita las colas y asegura tu
+        entrada a las películas de nicho que deseas ver reservando tus entradas con nuestra aplicación.</p>
+      <div class="flex flex-col items-center md:flex-row pb-4">
+        <button style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);"
+                class="font-bold py-3 p-1 px-12 bg-amber-500 rounded-md mb-2 md:mb-0 uppercase"
+                (click)="redirectToElection()">Comenzar<i class="ml-3 fas fa-angle-double-right"></i></button>
+      </div>
+    </div>
+  </div>
+  <!-- Merch description -->
+  <div class="pt-8 md:px-10 flex flex-col md:flex-row ">
+    <div class="px-5 w-full md:w-1/2 text-center md:text-left">
+      <div class="semicircle flex justify-center text-center"></div>
+      <h1 class="font-bold text-3xl md:text-4xl pb-10">04. Merch</h1>
+      <p class="text-black mb:text-xl mb-2 md:mb-5 text-center md:text-justify pb-6">Desde camisetas y tazas hasta
+        carteles y otros artículos de colección, nuestra aplicación te permite obtener merchandising exclusivo que no
+        encontrarás en ningún otro lugar. Demuestra tu pasión por el cine de nicho con estilo.</p>
+      <div class="flex flex-col items-center md:flex-row pb-4">
+        <button style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);"
+                class="font-bold py-3 p-1 px-12 bg-amber-500 rounded-md mb-2 md:mb-0 uppercase"
+                (click)="redirectToElection()">Comenzar<i class="ml-3 fas fa-angle-double-right"></i></button>
+      </div>
+    </div>
+    <div class="pt-8 md:pt-0 px-10 w-full md:w-1/2 ">
+      <img class="hidden md:block w-3/4" src="https://i.postimg.cc/vZNpwrj7/merch-description.png">
+    </div>
+  </div>
+
+  <section class="plan-section" id="plan">
+    <div class="contenedor">
+      <div class="tabla">
+        <h2>Basic</h2>
+        <!-- <img src="assets/img/8.jpg" alt=""> -->
+        <h3>US$7.99</h3>
+        <p>Empezar a enviar mensajes</p>
+        <p>Reuniones de equipos flexibles</p>
+        <p>2TB Cloud Storage.</p>
+        <a href="" class="boton">Comenzar</a>
+      </div>
+      <div class="tabla">
+        <h2>Startup</h2>
+        <!-- <img src="assets/img/6.jpg" alt=""> -->
+        <h3>US$14.99 </h3>
+        <p>Todas las funciones en basico</p>
+        <p>Programacion de llamdas flexibles</p>
+        <p>15TB Cloud Storage.</p>
+        <a href=""class="boton">Comenzar</a>
+      </div>
+      <div class="tabla">
+        <h2>Enterprise</h2>
+        <!-- <img src="assets/img/7.jpg" alt=""> -->
+        <h3>US$ 25.99</h3>
+        <p>Todas las funciones de la plataforma</p>
+        <p>Growth Oriented.</p>
+        <p>Unlimited Cloud Storage.</p>
+        <a href=""class="boton">Comenzar</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="AboutUs" class="AboutUs">
+
+    <h1>Respaldado por un gran equipo</h1>
+    <h4>TUCINE es una Startup formada por un grupo de estudiantes de
+      la Universidad Peruana de Ciencias Aplicadas, quienes buscan soluciones para los diferentes problemas que
+      pueden surgir en el día a día de las personas, a través de desarrollos tecnológicos creados por el equipo</h4>
+
+    <ul class="grid">
+      <li>
+        <div class="item"><img src="./assets/pictures/Tania.png" alt="Tania"></div>
+        <h4>Tania Vasquez</h4>
+        <p>Únete a una comunidad de miembros comparten la misma pasión por el cine</p>
+      </li>
+      <li>
+        <div class="item"><img src="./assets/pictures/Alan.png" alt="Alan"></div>
+        <h4>Alan Galavis</h4>
+        <p>La mejor plataforma para conocer personas y disfrutar de tus peliculas favoritas</p>
+      </li>
+
+      <li>
+        <div class="item"><img src="./assets/pictures/Andres.png" alt="Andres"></div>
+        <h4>Andrés Soto</h4>
+        <p>Vive una experiencia única  disfrutando del séptimo arte, junto a nuevas personas</p>
+      </li>
+
+      <li>
+        <div class="item"><img src="./assets/pictures/Alejandro.png" alt="Alejandro"></div>
+        <h4>Alejandro Medrano</h4>
+        <p>Se parte de esta comunidad de cinéfilos e interactua con otras personas</p>
+      </li>
+
+      <li>
+        <div class="item"><img src="./assets/pictures/Sebastian.png" alt="Sebastian"></div>
+        <h4>Sebastian Ramirez</h4>
+        <p>Una aplicación que reune personas apasionadas por el cine y que interactuen entre ellas</p>
+      </li>
+
+      <li>
+        <div class="item"><img src="./assets/pictures/Vanessa.png" alt="Vanessa"></div>
+        <h4>Vanessa Flores</h4>
+        <p>Aprende y enseña sobre tus expriencias con peliculas poco conocidad</p>
+      </li>
+    </ul>
+
+  </section>
+
+  <div class="p-6 bg-amber-50">
+    <div class="pt-8 flex flex-col items-center justify-center">
+      <h1 class="font-bold text-3xl md:text-4xl pb-10">No estás solo!</h1>
+      <p class="text-black mb:text-xl mb-2 md:mb-5 pb-6 text-center">Únete a una comunidad de miembros que comparten la mismas aficiones que tú y organiza salidas grupales.</p>
+    </div>
+    <div class="flex flex-col space-y-4 w-full md:px-60">
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="text-lg font-bold">Carla Muñante </h3>
+        <h3 class="text-lg font-bold">¡Totalmente recomendado! </h3>
+        <p class="text-gray-700">Con esta plataforma he conocido gente nueva que comparte mis intereses en cine de nicho y he asistido a proyecciones que de otra manera no habría conocido.
+        </p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="text-lg font-bold">Fernando Ibañez </h3>
+        <h3 class="text-lg font-bold">Exactamente lo que necesitaba</h3>
+        <p class="text-gray-700">Con esta aplicación he encontrado una amplia selección de películas interesantes y he podido conectarme con otros cinéfilos para disfrutar del cine de nicho juntos. ¡Una gran experiencia!
+        </p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="text-lg font-bold">Melissa Herrera</h3>
+        <h3 class="text-lg font-bold">La aplicación es muy fácil de usar</h3>
+        <p class="text-gray-700">Esta app me ha permitido descubrir nuevas películas y espacios culturales para ver cine de nicho en Perú. Además, la sección de reservas me ha ahorrado mucho tiempo. ¡Definitivamente recomiendo esta aplicación a cualquier amante del cine de nicho!
+        </p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<div class="pt-8 md:px-10 contact flex flex-col md:flex-row ">
+  <div class="px-5 w-full md:w-1/2 text-center md:text-left">
+    <h1 class="font-bold text-3xl md:text-6xl pb-10">Estamos para resolver tus dudas</h1>
+  </div>
+  <div class="pt-8 md:pt-0 px-10 form-container">
+    <form>
+      <div class="mb-12 shrink-0 grow-0 basis-auto md:mb-0 md:px-3 lg:px-6">
+        <form>
+          <div class="relative mb-6" data-te-input-wrapper-init>
+            <input type="text"
+                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-bold-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                   id="exampleInput90" placeholder="Name" />
+            <label
+              class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-bold-200 dark:peer-focus:text-primary"
+              for="exampleInput90">Name
+            </label>
+          </div>
+          <div class="relative mb-6" data-te-input-wrapper-init>
+            <input type="email"
+                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-bold-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                   id="exampleInput91" placeholder="Email address" />
+            <label
+              class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-bold-200 dark:peer-focus:text-primary"
+              for="exampleInput91">Email address
+            </label>
+          </div>
+          <div class="relative mb-6" data-te-input-wrapper-init>
+                    <textarea
+                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-bold-200 dark:placeholder:text-bold-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      id="exampleFormControlTextarea1" rows="3" placeholder="Your message"></textarea>
+            <label for="exampleFormControlTextarea1"
+                   class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-bold-200 dark:peer-focus:text-primary">Message</label>
+          </div>
+          <div class="mb-6 inline-block min-h-[1.5rem] justify-center pl-[1.5rem] md:flex">
+            <input
+              class="relative float-left mt-[0.15rem] mr-[6px] -ml-[1.5rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:ml-[0.25rem] checked:after:-mt-px checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-t-0 checked:after:border-l-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:ml-[0.25rem] checked:focus:after:-mt-px checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-t-0 checked:focus:after:border-l-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+              type="checkbox" value="" id="exampleCheck96" checked />
+            <label class="inline-block pl-[0.15rem] hover:cursor-pointer" for="exampleCheck96">
+              Acepto Terminos y Condiciones
+            </label>
+          </div>
+          <button type="button" data-te-ripple-init data-te-ripple-color="light"
+                  class="mb-6 inline-block w-full rounded bg-amber-500 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-dark shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+            Send
+          </button>
+        </form>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <nav class="relative flex flex-wrap items-center justify-between bg-amber-500 py-10">
+    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+      <div class="lg:flex lg:flex-grow items-center">
+        <ul class="flex flex-col lg:flex-row list-none mr-auto">
+          <li class="nav-item px-3 py-2 flex items-center leading-snug text-black hover:opacity-75">
+            <i class="material-icons">copyright</i>TuCine Corporation. Todos los derechos reservados
+          </li>
+        </ul>
+        <ul class="flex flex-col lg:flex-row list-none ml-auto">
+          <li class="nav-item px-3 py-2 flex items-center leading-snug text-black hover:opacity-75">
+            <a>
+              Política de privacidad
+            </a>
+          </li>
+          <li class="nav-item px-3 py-2 flex items-center leading-snug text-black hover:opacity-75">
+            <a>
+              Términos y condiciones
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</footer>
+</body>
